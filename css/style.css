@@ -1,4 +1,6 @@
-/******* BACKGROUND IMAGE ******/
+html{
+  font-size:1rem;
+}
 body{
   background:url('../images/space.jpg') no-repeat center center fixed; /* https://unsplash.com/photos/Q1p7bh3SHj8 */
   -webkit-background-size:cover;
@@ -41,7 +43,12 @@ body{
   padding-top:20px;
 }
 /***** MEDIA QUERIES ******/
-@media(max-width: 990px){
+@media(max-width:1200px) {
+    html
+    {font-size:2rem;
+    }
+}
+@media(max-width:990px){
   .navbar .navbar-nav {
       display:inline-block;
       float:none;
@@ -50,11 +57,22 @@ body{
   .navbar .navbar-collapse {
       text-align:center;
   }
+  html{
+    font-size:1.75rem;
+  }
 }
-@media(max-width: 732px){
+@media(max-width:732px){
   #map{
     height:350px;
     width:400px;
+  }
+  html{
+    font-size:1.5rem;
+  }
+}
+@media(max-width:576px) {
+  html{ 
+    font-size:1.25rem;
   }
 }
 @media(max-width:440px){
