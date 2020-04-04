@@ -1,0 +1,65 @@
+/******* BACKGROUND IMAGE ******/
+body{
+  background:url('../images/space.jpg') no-repeat center center fixed; /* https://unsplash.com/photos/Q1p7bh3SHj8 */
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  -o-background-size:cover;
+}
+/***** RANDOM CLASSES ******/
+.container-fluid{
+  color:white;
+  padding-top:200px;
+}
+.pad-top{
+  padding-top:20px;
+}
+.pad-bot{
+  padding-bottom:30px;
+}
+/***** MAIN ******/
+#apod img{
+  opacity:1;
+  width:100%;
+}
+#map{
+  margin:0 auto;
+  height:500px;
+  width:700px;
+}
+/******* FOOTER *******/
+#footer{
+  color:white;
+  margin-top:130px;
+  padding:2em;
+}
+#footer p{
+  margin:0;
+}
+.copyright{
+  font-size:0.8em;
+  padding-top:20px;
+}
+/***** MEDIA QUERIES ******/
+@media(max-width: 990px){
+  .navbar .navbar-nav {
+      display:inline-block;
+      float:none;
+      vertical-align:top;
+  }
+  .navbar .navbar-collapse {
+      text-align:center;
+  }
+}
+@media(max-width: 732px){
+  #map{
+    height:350px;
+    width:400px;
+  }
+}
+@media(max-width:440px){
+  #map{
+    height:280px;
+    width:280px;
+  }
+}

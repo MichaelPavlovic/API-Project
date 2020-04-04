@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Astronify</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Spacely</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#apod">APOD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tracker">ISS Tracker</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="container-fluid text-center">
+        <h1>Welcome to Astronify!</h1>
+        <p class="lead pad-top">This is a space themed website built for a school project.</p>
+        <p class="pad-top">Want to know where the International Space Station is? Find out now!</p>
+        <a class="btn btn-primary btn-lg" href="#tracker" role="button">ISS Tracker</a>
+      </section>
+      <section id="apod" class="container-fluid text-center">
+        <h2 class="pad-bot">Astronomy Picture of the Day</h2>
+        <div class="col-md-8 mx-auto">
+          <img id="image" class="img-fluid rounded" src="" alt="Astronomy Picture of the Day" />
+        </div>
+        <div class="text-center pad-top"><h3 id="title" class="h4"></h3></div>
+        <div id="exp" class="text-center pad-top col-md-8 mx-auto"></div>
+      </section>
+      <section id="tracker" class="container-fluid text-center">
+        <h2 class="pad-bot">ISS Tracker</h2>
+        <p>The Internation Space Station is currently:</p>
+        <div id="map"></div>
+      </section>
+    </main>
+    <footer id="footer" class="text-center">
+      <p> Michael Pavlovic - This website is for educational purposes only.</p>
+      <div class="copyright">
+        <p>Background from <a href="https://unsplash.com/photos/Q1p7bh3SHj8">unsplash</a></p>
+        <p>APOD image from NASA's <a href="https://apod.nasa.gov/apod/astropix.html">APOD archive</a></p>
+        <p>Map marker icon from <a href="http://www.iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/international-space-station-icon.html">iconarchive</a></p>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="scripts/tracker.js"></script>
+    <script src="scripts/apod.js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1_dnoMgWnHo5ZZHS033QouXVI9uqQY9Y&callback=initMap"></script>
+  </body>
+</html>
