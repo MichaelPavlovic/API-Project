@@ -26,8 +26,8 @@ body{
 }
 #map{
   margin:0 auto;
-  height:500px;
-  width:700px;
+  height:700px;
+  width:1000px;
 }
 /******* FOOTER *******/
 #footer{
@@ -44,9 +44,15 @@ body{
 }
 /***** MEDIA QUERIES ******/
 @media(max-width:1200px) {
-    html
-    {font-size:2rem;
+    html{
+      font-size:2rem;
     }
+}
+@media(max-width:1050px) {
+  #map{
+    height:600px;
+    width:800px;
+  }
 }
 @media(max-width:990px){
   .navbar .navbar-nav {
@@ -58,21 +64,31 @@ body{
       text-align:center;
   }
   html{
-    font-size:1.75rem;
+    font-size:1.85rem;
+  }
+}
+@media(max-width:860px) {
+  #map{
+    height:500px;
+    width:650px;
   }
 }
 @media(max-width:732px){
   #map{
-    height:350px;
-    width:400px;
+    height:400px;
+    width:500px;
   }
   html{
-    font-size:1.5rem;
+    font-size:1.7rem;
   }
 }
 @media(max-width:576px) {
   html{ 
-    font-size:1.25rem;
+    font-size:1.5rem;
+  }
+  #map{
+    height:300px;
+    width:400px;
   }
 }
 @media(max-width:440px){

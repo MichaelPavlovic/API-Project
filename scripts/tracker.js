@@ -31,6 +31,7 @@ function initMap(){
         //make the request
         let request = new XMLHttpRequest();
 
+        //send a request to the api url
         request.open("GET", url);
         request.send();
 
