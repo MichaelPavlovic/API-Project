@@ -53,5 +53,5 @@ function initMap(){
                 map.panTo({lat: latitude, lng: longitude});
             }
         });
-    }, 5000);
+    }, 3000);
 }
