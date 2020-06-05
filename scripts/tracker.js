@@ -21,15 +21,15 @@ function initMap(){
         },
         map: map,
         icon: "images/iss.png" //custom icon (link to icon can be found in html footer)
-    });
+    }); 
 
-    //update the ISS location every 5 seconds
+    //update the ISS location every 3 seconds
     setInterval(function(){
         //set the url location
-        let url = "https://api.wheretheiss.at/v1/satellites/25544/";
+        const url = "https://api.wheretheiss.at/v1/satellites/25544/";
 
         //make the request
-        let request = new XMLHttpRequest();
+        const request = new XMLHttpRequest();
 
         //send a request to the api url
         request.open("GET", url);

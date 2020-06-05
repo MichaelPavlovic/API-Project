@@ -1,10 +1,10 @@
-const url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+const APOD_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
 //make a new request
-let request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 
 //send a request to the api url
-request.open("GET", url);
+request.open("GET", APOD_URL);
 request.send();
 
 //add an event listener for when the request loads

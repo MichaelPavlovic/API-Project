@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronify - Home</title>
+    <title>Astronify - ISS Tracker</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   </head>
   <body>
     <header class="header">
@@ -23,19 +22,10 @@
       </nav>
     </header>
     <main id="main">
-      <section class="container-fluid text-center">
-        <h1>Welcome to Astronify!</h1>
-        <p class="lead pad-top">This is a simple International Space Station tracker built with the <a href="https://wheretheiss.at/w/developer">wheretheissat</a> and <a href="http://open-notify.org/">open notify</a> APIs.</p>
-        <p class="pad-top">Want to know where the ISS is? Click below to find out!</p>
-        <a class="btn btn-primary btn-lg" href="tracker.html" role="button">ISS Tracker</a>
-      </section>
-      <section id="apod" class="container-fluid text-center">
-        <h2 class="pad-bot">Astronomy Picture of the Day</h2>
-        <div class="col-md-8 mx-auto">
-          <img id="image" class="img-fluid rounded" src="" alt="Astronomy Picture of the Day" />
-        </div>
-        <div class="text-center pad-top"><h3 id="title" class="h4"></h3></div>
-        <div id="exp" class="text-center pad-top col-md-8 mx-auto"></div>
+      <section id="tracker" class="container-fluid text-center">
+        <h2 class="pad-bot">ISS Tracker</h2>
+        <p>The International Space Station is currently:</p>
+        <div id="map"></div>
       </section>
     </main>
     <footer id="footer" class="text-center">
@@ -47,9 +37,10 @@
       </div>
     </footer>
     <!-- scripts -->
-    <script src="scripts/apod.js"></script>
+    <script src="scripts/tracker.js"></script>
     <script src="scripts/navtoggle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1_dnoMgWnHo5ZZHS033QouXVI9uqQY9Y&callback=initMap"></script>
   </body>
 </html>

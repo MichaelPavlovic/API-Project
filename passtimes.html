@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronify - Home</title>
+    <title>Astronify - Pass Times</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   </head>
   <body>
     <header class="header">
@@ -23,19 +22,45 @@
       </nav>
     </header>
     <main id="main">
-      <section class="container-fluid text-center">
-        <h1>Welcome to Astronify!</h1>
-        <p class="lead pad-top">This is a simple International Space Station tracker built with the <a href="https://wheretheiss.at/w/developer">wheretheissat</a> and <a href="http://open-notify.org/">open notify</a> APIs.</p>
-        <p class="pad-top">Want to know where the ISS is? Click below to find out!</p>
-        <a class="btn btn-primary btn-lg" href="tracker.html" role="button">ISS Tracker</a>
-      </section>
       <section id="apod" class="container-fluid text-center">
-        <h2 class="pad-bot">Astronomy Picture of the Day</h2>
-        <div class="col-md-8 mx-auto">
-          <img id="image" class="img-fluid rounded" src="" alt="Astronomy Picture of the Day" />
+        <h1 class="pad-bot h2">Pass Times</h2>
+        <div class="text-center pad-top"><p>Enter a longitude and latitude to find out the next time the ISS will pass over that location.</p></div>
+        <div class="text-center pad-top col-md-4 mx-auto">
+            <form action="passtimes.html" method="GET">
+              <div id="error">
+                <span id="laterror"></span>
+                <span id="longerror"></span>
+              </div>
+                <div class="form-group">
+                    <label for="lat" class="sr-only">Latitude</label>
+                    <input type="text" id="lat" name="lat" placeholder="Enter a latitude..." class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="long" class="sr-only">Longitude</label>
+                    <input type="text" id="long" name="long" placeholder="Enter a longitude..." class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="passtimes">Number of pass times</label>
+                  <select id="passtimes" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
         </div>
-        <div class="text-center pad-top"><h3 id="title" class="h4"></h3></div>
-        <div id="exp" class="text-center pad-top col-md-8 mx-auto"></div>
+        <div id="results" class="text-center pad-top" >
+            <h3>Results:</h3>
+            <div>
+                <p>The next pass times for the location Lat: <span id="results__lat"></span> and Long: <span id="results__long"></span> are:</p>
+                <ul id="results__passes">
+
+                </ul>
+            </div>
+        </div>
       </section>
     </main>
     <footer id="footer" class="text-center">
@@ -47,7 +72,7 @@
       </div>
     </footer>
     <!-- scripts -->
-    <script src="scripts/apod.js"></script>
+    <script src="scripts/passtimes.js"></script>
     <script src="scripts/navtoggle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
