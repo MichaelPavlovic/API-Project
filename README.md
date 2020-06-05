@@ -6,5 +6,6 @@ Simple ISS tracker built for a school assignment.
  - JavaScript
  - Bootstrap
  - [Open notify](http://open-notify.org/)
+ - [Where the ISS at](https://wheretheiss.at/w/developer)
+ - [Google Maps](https://developers.google.com/maps/documentation)
  - [NASA's APOD API](https://api.nasa.gov/)
- - [Google Maps](https://developers.google.com/maps/documentation) and [wheretheiss API](https://wheretheiss.at/w/developer) for tracker
